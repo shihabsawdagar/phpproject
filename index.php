@@ -22,6 +22,8 @@
         $name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
         $gender = isset($_POST['gender']) ? htmlspecialchars($_POST['gender']) : ''; 
         $subscribe = isset($_POST['subscribe']) ? 'Yes' : 'No';
+        $subscribe2 = isset($_POST['subscribe2']) ? 'Yes' : 'No';
+        $subscribe3 = isset($_POST['subscribe3']) ? 'Yes' : 'No';
         $datepicker = isset($_POST['datepicker']) ? htmlspecialchars($_POST['datepicker']) : ''; 
         $timepicker = isset($_POST['timepicker']) ? htmlspecialchars($_POST['timepicker']) : ''; 
         $options = isset($_POST['options']) ? $_POST['options'] : [];
@@ -32,8 +34,9 @@
         echo '<li><strong>Name:</strong>'.$name. '</li>';
         echo '<li><strong>Gender:</strong>'.$gender .'</li>';
         echo '<li><strong>Subscribe:</strong>'.$subscribe.'</li>';
+        echo '<li><strong>Subscribe 2:</strong>'.$subscribe2.'</li>';
+        echo '<li><strong>Subscribe 3:</strong>'.$subscribe3.'</li>';
         echo '<li><strong>Date Picker:</strong>'.$datepicker. '</li>';
-        echo '<li><strong>Gender:</strong>'.$datepicker. '</li>';
         echo '<li><strong>Time Picker:</strong>'.$timepicker. '</li>';
         echo '<li><strong>Options:</strong>'. implode(',', $options) . '</li>';
         echo '<li><strong>Country:</strong>'.$country. '</li>';
