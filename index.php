@@ -53,6 +53,7 @@
             type="text"
             name="name"
             class="mt-1 p-2 w-full border rounded-md"
+            id="name"
             value="<?php echo $name ?>"
           />
         </div>
@@ -183,12 +184,12 @@
             class="mt-1 p-2 w-full border rounded-md"
             multiple
           >
-            <option value="option1"  <?php echo in_array('option1',$options) ? 'selected' : '' ?>>Option1</option>
-            <option value="option2"  <?php echo in_array('option2',$options) ? 'selected' : '' ?>>Option2</option>
-            <option value="option3" <?php echo in_array('option3',$options) ? 'selected' : '' ?>>Option3</option>
-            <option value="option4" <?php echo in_array('option4',$options) ? 'selected' : '' ?>> Option4</option>
-            <option value="option5" <?php echo in_array('option5',$options) ? 'selected' : '' ?>>Option5</option>
-            <option value="option6" <?php echo in_array('option6',$options) ? 'selected' : '' ?>>Option6</option>
+            <option value="option1"  <?php echo in_array('option1',$options ?? []) ? 'selected' : '' ?>>Option1</option>
+            <option value="option2"  <?php echo in_array('option2',$options ??[]) ? 'selected' : '' ?>>Option2</option>
+            <option value="option3" <?php echo in_array('option3',$options ??[]) ? 'selected' : '' ?>>Option3</option>
+            <option value="option4" <?php echo in_array('option4',$options ??[]) ? 'selected' : '' ?>> Option4</option>
+            <option value="option5" <?php echo in_array('option5',$options ??[]) ? 'selected' : '' ?>>Option5</option>
+            <option value="option6" <?php echo in_array('option6',$options ??[]) ? 'selected' : '' ?>>Option6</option>
           </select>
         </div>
 
@@ -231,10 +232,10 @@
       });
 
       flatpickr("#timepicker", {
-       enableTime: true,
-       noCalender: true,
-       dateFormat: 'H:i',
-      });
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+});
     </script>
   </body>
 </html>
